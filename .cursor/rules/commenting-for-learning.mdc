@@ -1,0 +1,65 @@
+---
+description:Pravilnik komentarisanja za učenje – komentari koji pomažu početniku da razume React kod dok razvija chat aplikaciju
+globs:**/*.{js,jsx,ts,tsx}
+alwaysApply: true
+---
+
+## 🎯 Ciljevi komentara:
+
+- **Objasni "ZAŠTO"** nešto postoji – ne samo "ŠTA"
+- **Uči me korak po korak**, kao da imam mentora pored sebe
+- **Piši komentare i u JSX-u**, ne samo u JS funkcijama
+- **Komentariši čak i ako je kod jednostavan**
+- **Neka komentari budu kratki i jasni**, osim kad objašnjavaju važnu logiku
+
+## 🧠 Format komentara
+### 🟢 1. **Jednolinijski komentari** (za kraće objašnjenje)
+
+```js
+// Inicijalizujemo state za čuvanje svih poruka iz chata
+const [messages, setMessages] = useState([]);
+
+2. Višelinijski komentari (kada je potrebno objasniti tok ili logiku)
+
+Kada korisnik pošalje poruku:
+
+Uzimamo poruku iz inputa
+
+Dodajemo je u niz poruka
+
+Resetujemo input polje
+*/
+function handleSendMessage() {
+// ...
+}
+
+
+3. **JSX komentari** (moraju biti u `{/* ... */}` formatu)
+
+```jsx
+{/* Prikazujemo sve poruke u listi */}
+<ul>
+  {messages.map((msg, index) => (
+    <li key={index}>{msg}</li>
+  ))}
+</ul>
+
+🛠️ Pravila koja Cursor treba da prati:
+Za svaki useState, napiši komentar koji objašnjava njegovu ulogu u aplikaciji
+
+Za svaki useEffect, objasni kada se pokreće i zašto
+
+Za svaki props, opiši šta taj prop predstavlja i kako se koristi
+
+Za funkcije, napiši šta rade i kada se pozivaju
+
+U JSX-u, komentariši kada se prikazuju određeni delovi (uslovno renderovanje, liste, forme...)
+
+Stil i dužina
+Komentari neka budu 1–3 linije
+
+Neka budu jednostavni za čitanje
+
+Neka uče korisnika "šta" + "zašto" na jeziku koji razume
+
+Neka svaki deo koda koji pišem ima objašnjenje koje mi pomaže da ga razumem i da naučim kako funkcioniše, bez obzira koliko je jednostavan.
