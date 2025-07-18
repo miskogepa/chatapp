@@ -1,0 +1,15 @@
+node_modules/
+
+.env
+
+
+# Ignorišemo build artefakte i privremene fajlove
+/dist/
+/build/
+/tmp/
+
+
+
+# Ignorišemo OS specifične fajlove
+.DS_Store
+Thumbs.db 
