@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 const connectToDB = async () => {
   try {
     // Povezujemo se sa bazom koristeći URI iz .env fajla
-    await mongoose.connect(process.env.MONGO_URI);
+    await mongoose.connect(process.env.MONGO_DB_URI);
     console.log("Uspesno povezivanje sa bazom podataka");
   } catch (error) {
     // Ako dođe do greške, ispisujemo je u konzolu
