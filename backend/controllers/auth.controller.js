@@ -53,12 +53,43 @@ export const signup = async (req, res) => {
   }
 };
 
-// Definišemo funkciju login koja obrađuje login zahteve
-export const login = (req, res) => {
-  // Kada se pozove ova funkcija, vraća "Login da" kao odgovor
-  res.send("Login da");
+export const login = async (req, res) => {
+  try {
+    const { username, password } = req.body;
+    const user = await User.findOne({ username });
+    if (user) {
+      const isPasswordCorrect = await bcrypt.compare(
+        password,
+        user?.password || ""
+      );
+      if (!user || !isPasswordCorrect) {
+        return res.status(400).json({ error: "Invalid credentials" });
+      }
+      generateToken(user._id, res);
+      res.status(200).json({
+        _id: user._id,
+        fullName: user.fullName,
+        username: user.username,
+        profilePic: user.profilePic,
+        gender: user.gender,
+        createdAt: user.createdAt,
+        updatedAt: user.updatedAt,
+      });
+    } else {
+      return res.status(400).json({ error: "User not found" });
+    }
+  } catch (error) {
+    console.log("Error in login", error.message);
+    res.status(500).json({ error: "Internal server error" });
+  }
 };
 
 export const logout = (req, res) => {
-  console.log("logoutUser");
+  try {
+    res.cookie("jwt", "", { maxAge: 0 });
+    res.status(200).json({ message: "Logged out successfully" });
+  } catch (error) {
+    console.log("Error in logout", error.message);
+    res.status(500).json({ error: "Internal server error" });
+  }
 };

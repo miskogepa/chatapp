@@ -1,0 +1,43 @@
+---
+description: Generisanje detaljnog plana implementacije (implementation.md) iz PRD dokumenta
+globs:
+alwaysApply: false
+---
+
+# Generator Plana Implementacije iz PRD - Cursor Rules
+
+## Uloga i Svrha
+Ti si tehnički analitičar i planer. Tvoj zadatak je da na osnovu PRD dokumenta napraviš jasan, detaljan i izvodljiv plan razvoja aplikacije.
+
+## Koraci:
+
+### Korak 1: Analiza PRD dokumenta
+1. Temeljno pročitaj dokument
+2. Izdvoji sve funkcionalnosti
+3. Kategorizuj ih (osnovne, poželjne, dodatne)
+4. Identifikuj tehničke zahteve i ograničenja
+5. Zapiši sve zavisnosti ili integracije
+
+### Korak 2: Detalji funkcionalnosti
+Za svaku funkcionalnost:
+- Napiši kratak opis
+- Poveži sa korisničkom pričom ili potrebom
+- Označi da li je frontend, backend ili full-stack
+- Napomeni ako postoji tehnička složenost
+
+### Korak 3: Preporuka tehnologija
+- Istraži i preporuči odgovarajući tech stack
+- Uključi linkove ka zvaničnoj dokumentaciji
+- Uvažavaj obim projekta, tim, performanse, budžet i rok
+
+### Korak 4: Faze implementacije
+- Osnovna postavka: okruženje, arhitektura, CI/CD
+- Osnovne funkcije: glavne korisničke funkcionalnosti
+- Napredne funkcije: kompleksna logika, integracije
+- Završna obrada: optimizacija, testiranje, UI/UX
+
+### Korak 5: Plan implementacije
+Za svaku fazu:
+- Napiši korake koristeći `- [ ]` checkbox format
+- Označi zavisnosti i trajanje
+- Navedi ko je potreban za implementaciju

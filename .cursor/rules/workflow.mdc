@@ -1,0 +1,51 @@
+---
+description: Detaljno workflow pravilo za razvojni proces
+alwaysApply: true
+---
+
+# Razvojni Workflow - Cursor Pravila
+
+## Pre početka zadatka:
+- Proveri `/Docs/Implementation.md` da vidiš u kojoj si fazi
+- Proveri zavisnosti i zadatke koji prethode
+
+## Tok rada:
+
+1. **Analiza zadatka**  
+   - Ako je jednostavan: odmah implementiraj  
+   - Ako je složen: napravi mini todo listu
+
+2. **Istraživanje dokumentacije**  
+   - Proveri da li su priloženi linkovi ka dokumentaciji  
+   - Pročitaj i primeni ih
+
+3. **UI/UX rad**  
+   - Poštuj uputstva iz `UI_UX_doc.md`  
+   - Prati responsive dizajn i dizajn sistem
+
+4. **Struktura projekta**  
+   - Sve nove fajlove i foldere pravi prema `project_structure.md`  
+   - Nikada ne pravi novu strukturu bez konsultacije
+
+5. **Greške i praćenje**  
+   - Proveri `Bug_tracking.md` pre rešavanja bilo čega  
+   - Svaku novu grešku zapiši sa uzrokom i rešenjem
+
+6. **Završetak zadatka**  
+   - Implementirano funkcionalno
+   - UI odgovara specifikaciji
+   - Nema grešaka ni upozorenja
+   - Zatvori task tek nakon provere
+
+## Redosled fajlova za proveru:
+1. `Bug_tracking.md`
+2. `Implementation.md`
+3. `project_structure.md`
+4. `UI_UX_doc.md`
+
+## Obavezna pravila:
+- **NE** preskači dokumentaciju
+- **NE** završavaj task bez testiranja
+- **NE** ignoriši strukturu projekta
+- **UVEK** dokumentuj greške
+- **UVEK** prati propisani tok rada
